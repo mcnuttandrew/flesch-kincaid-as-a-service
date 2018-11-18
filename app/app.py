@@ -17,29 +17,11 @@ def decorate_response(response):
 def static_serve():
     return render_template('index.html')
 
-
-EASE_LABELS = [
-    (90, 100, "Very Easy"),
-    (80, 89, "Easy"),
-    (70, 79, "Fairly Easy"),
-    (60, 69, "Standard"),
-    (50, 59, "Fairly Difficult"),
-    (30, 49, "Difficult"),
-    (0, 29, "Very Confusing")
-]
-def fk_ease_label(ease):
-    for upper, lower, label in EASE_LABELS:
-        if ease >= lower and ease < upper:
-            return label
-    return 'UNKNOWN'
-
 @app.route('/analyze', methods=['POST'])
 def analyze():
     print(request)
     str_to_read = request.data.decode("utf-8").strip()
 
-
-    # ease = textstat.flesch_reading_ease(str_to_read)
     report = {
         "flesch-reading-ease": textstat.flesch_reading_ease(str_to_read),
         "smog-index": textstat.smog_index(str_to_read),

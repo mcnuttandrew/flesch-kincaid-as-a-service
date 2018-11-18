@@ -8,32 +8,41 @@
       rel="stylesheet"
       type="text/css"
       href={{ url_for('static', filename='styles/styles.css') }} />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles.css" /> -->
  </head>
   </head>
   <body>
-    <div class="flex-down full-size">
-      <div class="flex-down center">
-        <h1>READABILITY AS A SERVICE</h1>
-        <div>
-          <span> It can be hard to judge just how readable a particular piece of text it. Fortunately there are a nubmer of quantitative metrics by which to measure. Drop a piece of text below and see how it stacks up across a variety of metrics</span>
+    <div class="flex-down full-size center">
+      <div class="main-container">
+        <div class="flex-down">
+          <h1>READABILITY AS A SERVICE</h1>
+          <div>Created by <a href="https://www.mcnutt.in/">Andrew McNutt</a> and powered by <a href="https://github.com/shivam5992/textstat">textstat</a></div>
+          <div class="description"> It can be hard to judge just how readable a particular piece of text it. Fortunately there are a nubmer of quantitative metrics by which to measure. Drop a piece of text below and see how it stacks up across a variety of metrics.
+          </div>
+        </div>
+        <div class="flex-down full-size">
+          <div class="flex full-size">
+            <textarea class="textmsg">PASTE YOUR CONTENT HERE</textarea>
+          </div>
+          <button class="submission">SUBMIT</button>
+          <div class="buttons flex">
+            <span class="buttons-label"> don't know what to try? </span>
+            <button class="proust">TRY PROUST</button>
+            <button class="poem">TRY A POEM</button>
+          </div>
+        </div>
+        <div class="report flex-down">
+          <h3>Ledgibility Report</h3>
+          <span class="description">These metrics are each flawed in their own manner. So take their commentary with a grain of salt.</span>
+          <h5>Summary: <span class="summary-content"></span></h5>
+          <div class="flex-down grades"></div>
         </div>
       </div>
-      <div class="flex-down center pad-top">
-        <div class="flex pad-top">
-          <textarea class="textmsg">PASTE YOUR CONTENT HERE</textarea>
-          <div class="report flex-down"></div>
-        </div>
-        <button class="submission">SUBMIT</button>
-        <div>
-          <span> don't know what to try? </span>
-          <button class="proust">TRY PROUST</button>
-          <button class="poem">TRY A POEM</button>
-        </div>
-      </div>
-    </div>
-    <div class="flex footer">
-      <span>Made by <a href="https://www.mcnutt.in/">McNutt</a> and backed by <a href="https://github.com/shivam5992/textstat">textstat</a></span>
     </div>
     <script src={{ url_for('static', filename='js/main.js') }}></script>
+    <!-- <script src="main.js"></script> -->
   </body>
 </html>

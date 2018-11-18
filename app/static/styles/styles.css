@@ -2,8 +2,44 @@
 body,
 html,
 .full-size {
+  font-family: Gill Sans, Gill Sans MT,Calibri,sans-serif;
   height: 100%;
   width: 100%;
+}
+
+body {
+  margin-bottom: 400px;
+}
+
+a {
+  color: #6c8aa4;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6c8aa4;
+}
+
+button {
+  background: none;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 8px;
+  padding: 5px;
+  font-weight: 900;
+}
+
+textarea {
+  border: 3px solid black;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 100;
+  margin: 20px 0;
+  resize: none;
+}
+
+.description {
+  font-size: 12px;
 }
 
 .flex {
@@ -17,24 +53,54 @@ html,
 
 .center {
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .textmsg {
-  height: 500px;
-  width: 300px;
+  height: 200px;
+  max-height: 200px;
+  width: 100%;
 }
 
-.report {
-  padding: 0 20px;
-}
 
 .pad-top {
   padding: 50px 0;
 }
 
-.footer {
-  bottom: 0;
-  left: 20px;
-  position: absolute;
+
+.main-container {
+  max-width: 500px;
+}
+
+.buttons-label {
+  font-weight: 100;
+}
+
+.buttons {
+  align-items: center;
+  padding: 10px 0;
+  justify-content: flex-end;
+}
+
+.buttons button:nth-child(2) {
+  margin: 0 5px;
+}
+
+
+.report {
+  display: none;
+}
+
+.grade {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-container {
+    max-width: 300px;
+  }
 }
