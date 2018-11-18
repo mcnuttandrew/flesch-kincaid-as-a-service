@@ -56,13 +56,17 @@ const DALL_CHALL = [
   {score: 7.0, annotation: 'Easily understood by an average 9th or 10th-grade student'},
   {score: 6.0, annotation: 'Easily understood by an average 7th or 8th-grade student'},
   {score: 5.0, annotation: 'Easily understood by an average 5th or 6th-grade student'},
-  {score: 4.9, annotation: 'Easily understood by an average 4th-grade student or lower'}
+  {score: -Infinity, annotation: 'Easily understood by an average 4th-grade student or lower'}
 ];
 
 const GRADE_NUMBERED = val => {
   const {age} = GRADED_SCORED.find(({score}) => score <= Number(val));
   return `Appropriate for ${age} reading level`;
 }
+
+const ordinalMap = {1: 'st', 2: 'nd', 3: 'rd'};
+const teensMap = {11: 'th', 12: 'th', 13: 'th'};
+const getOrdinalSuffix = num => teensMap[num % 100] || ordinalMap[num % 10] || 'th';
 
 const GRADES = [{
   displayName: 'Automated Readability Index',
@@ -89,7 +93,7 @@ const GRADES = [{
   displayName: 'Flesch-Kinkiad grade level',
   name: 'flesch-kinkiad-grade',
   link: 'https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch%E2%80%93Kincaid_grade_level',
-  buildDescription: val => `Appropriate for a ${val} grade level`
+  buildDescription: val => `Appropriate for a ${val}${getOrdinalSuffix(val)} grade level`
 }, {
   displayName: 'Flesch Reading ease',
   name: 'flesch-reading-ease',
