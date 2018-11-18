@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Readability</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={{ url_for('static', filename='styles/styles.css') }} />
+ </head>
+  </head>
+  <body>
+    <div class="flex-down full-size">
+      <div class="flex-down center">
+        <h1>READABILITY AS A SERVICE</h1>
+        <div>
+          <span> It can be hard to judge just how readable a particular piece of text it. Fortunately there are a nubmer of quantitative metrics by which to measure. Drop a piece of text below and see how it stacks up across a variety of metrics</span>
+        </div>
+      </div>
+      <div class="flex-down center pad-top">
+        <div class="flex pad-top">
+          <textarea class="textmsg">PASTE YOUR CONTENT HERE</textarea>
+          <div class="report flex-down"></div>
+        </div>
+        <button class="submission">SUBMIT</button>
+        <div>
+          <span> don't know what to try? </span>
+          <button class="proust">TRY PROUST</button>
+          <button class="poem">TRY A POEM</button>
+        </div>
+      </div>
+    </div>
+    <div class="flex footer">
+      <span>Made by <a href="https://www.mcnutt.in/">McNutt</a> and backed by <a href="https://github.com/shivam5992/textstat">textstat</a></span>
+    </div>
+    <script src={{ url_for('static', filename='js/main.js') }}></script>
+  </body>
+</html>
