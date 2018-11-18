@@ -115,7 +115,7 @@ const GRADES = [{
 ]
 
 document.querySelector('.submission').addEventListener('click', () => {
-  fetch('http://localhost:8000/analyze', {
+  fetch('/analyze', {
     method: 'POST',
     body: getTextBody().value
   })
