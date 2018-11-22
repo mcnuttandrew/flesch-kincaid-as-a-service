@@ -6,5 +6,5 @@ Jinja2==2.10
 MarkupSafe==1.0
 Pyphen==0.9.5
 repoze.lru==0.7
-textstat==0.5.2
+textstat==0.5.3
 Werkzeug==0.14.1
