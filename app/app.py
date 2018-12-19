@@ -25,7 +25,7 @@ def analyze():
     report = {
         "flesch-reading-ease": textstat.flesch_reading_ease(str_to_read),
         "smog-index": textstat.smog_index(str_to_read),
-        "flesch-kinkiad-grade": textstat.flesch_kincaid_grade(str_to_read),
+        "flesch-kincaid-grade": textstat.flesch_kincaid_grade(str_to_read),
         "coleman-liau-index": textstat.coleman_liau_index(str_to_read),
         "automated-readability-index": textstat.automated_readability_index(str_to_read),
         "dale-chall-readability-score": textstat.dale_chall_readability_score(str_to_read),

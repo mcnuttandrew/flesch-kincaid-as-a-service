@@ -90,8 +90,8 @@ const GRADES = [{
   link: 'https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula',
   buildDescription: val => DALL_CHALL.find(({score, annotation}) => val > score).annotation
 }, {
-  displayName: 'Flesch-Kinkiad grade level',
-  name: 'flesch-kinkiad-grade',
+  displayName: 'Flesch-Kincaid grade level',
+  name: 'flesch-kincaid-grade',
   link: 'https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch%E2%80%93Kincaid_grade_level',
   buildDescription: val => `Appropriate for a ${val}${getOrdinalSuffix(val)} grade level`
 }, {

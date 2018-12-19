@@ -19,7 +19,7 @@ Which returns
     "coleman-liau-index": -15.81,
     "dale-chall-readability-score": 0,
     "difficult-words": 0,
-    "flesch-kinkiad-grade": -15.7,
+    "flesch-kincaid-grade": -15.7,
     "flesch-reading-ease": 206.84,
     "gunning-fog": 0,
     "linsear-write-formula": -1,
